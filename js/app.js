@@ -37,11 +37,11 @@ $(document).ready(function(){
 		var guess = $("#userGuess").val();
 		if (guess >= 1 && guess <= 100) {
 			if (guess == secretNumber) {
-				$("#guessButton").attr('disabled', true);
+				$(this).attr("disabled", true);
 				$("#feedback").replaceWith( "<h2 id='feedback'>" + "Push new game to start again!" + "</h2>");
 				guessCount++;
 				$("#count").replaceWith("<span id='count'>" + guessCount + "</span>");
-				$("#guessList").prepend("<li style='display:block;'>" + "Victory! " + guess + " is the correct answer!" + "</li>");						
+				$("#guessList").prepend("<li style='display:block;'>" + "Victory! " + guess + " is the correct answer!" + "</li>");					
 				} 
 					else if 
 					 (Math.abs(guess - secretNumber) >= 50) {
